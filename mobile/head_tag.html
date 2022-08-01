@@ -1,4 +1,4 @@
-<script type="text/discourse-plugin" version="0.8.18">
+<script type="" version="0.8.18">
   const { iconHTML } = require("discourse-common/lib/icon-library");
 
   var nmlt = settings.Nav_links,
@@ -12,6 +12,13 @@
     var sec = $.map(this.split(";"), $.trim),
       filter = sec[0].replace(/\s+/g, "-").toLowerCase(),
       location = sec[2];
+      console.log({
+      name: filter,
+      displayName: sec[0],
+      title: sec[1],
+      href: sec[2],
+    })
+      
 
     api.addNavigationBarItem({
       name: filter,
