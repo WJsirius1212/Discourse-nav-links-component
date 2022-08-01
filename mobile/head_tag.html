@@ -1,6 +1,7 @@
 <script type="text/discourse-plugin" version="0.8.18">
   // text/discourse-plugin
   const { iconHTML } = require("discourse-common/lib/icon-library");
+  import { getOwner } from "discourse-common/lib/get-owner";
 
   var nmlt = settings.Nav_links,
     sec = $.map(nmlt.split("|"), $.trim),
